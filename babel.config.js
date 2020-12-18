@@ -1,10 +1,7 @@
-module.exports = function(api) {
+module.exports = function (api) {
     api.cache(false);
 
     return {
-        plugins: ['babel-plugin-rewire-exports'],
-        presets: [['@babel/preset-react', {
-            development: true
-        }]]
+        plugins: ['babel-plugin-rewire-exports', '@babel/plugin-transform-react-jsx-development'],
     };
 };

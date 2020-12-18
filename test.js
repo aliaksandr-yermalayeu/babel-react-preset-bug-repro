@@ -16,4 +16,4 @@ const transform = (filename) => {
 const file = 'src/app.jsx';
 const { code } = transform(file);
 
-assert(code.includes('React.createElement') && !code.includes('<span'), `JSX is not really transpiled: \n ${code}`);
+assert(!code.includes('<span'), `JSX is not really transpiled: \n ${code}`);
